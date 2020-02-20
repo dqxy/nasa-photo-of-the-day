@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from "react";
 import NasaCard from "./NasaCard";
 import axios from "axios";
+import styled from "styled-components";
+const NasaButton = styled.button`
+  width: 150px;
+  height: 30px;
+  background: ${props => (props.primary ? "pink" : "#2b0c00")};
+  color: ${props => (props.primary ? "yellow" : "white")};
+  border: 0;
+  margin: 5px 10px;
+`;
 
 export default function NasaGrid() {
   const [images, setImages] = useState([]);
@@ -22,8 +31,8 @@ export default function NasaGrid() {
   }, [cam]);
   return (
     <div className="container">
-      <button onClick={() => setCam("fhaz")}>Front Hazard</button>
-      <button onClick={() => setCam("rhaz")}>Rear Hazard</button>
+      <NasaButton onClick={() => setCam("fhaz")}>Front Hazard</NasaButton>
+      <NasaButton onClick={() => setCam("rhaz")}>Rear Hazard</NasaButton>
       <div className="entry">
         {images.map(image => {
           return <NasaCard cam={cam} img_src={image.img_src} id={image.id}/>;

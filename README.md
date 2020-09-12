@@ -32,11 +32,6 @@ _Note: if the photo url is NOT a photo, you will need to learn how to display a 
 **Step 5 - Display the Data**
 Now is the time to build out your other components. Compose your UI, and then pass the data to your children components via props so you can render it on the DOM.
 
-## _MVP Requirements:_
-
-- [ ] Use the effect hook to fetch the APOD data when the component mounts.
-- [ ] Display the APOD data in different components that are composed together to build your UI.
-
 ## Pro Tips:
 
 - You may run into an error where your components try to access object properties before your data is finished being fetched - ie. `Cannot read property 'url' of undefined`. This means that the data you passed as props is undefined, when you were expecting it to be an object. You can fix this by simply adding something like this to any component that needs to read data from your state object:

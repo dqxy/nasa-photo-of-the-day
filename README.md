@@ -7,7 +7,7 @@ This project consumes the NASA API to fetch the "Astronomy Photo Of The Day" or 
 
 ---
 
-This project was put together using create-react-app (CRA). Follow the steps below to setup the project with the proper dependencies.
+This project was put together using create-react-app (CRA).
 
 - [ ] In `App.js` (or where ever you wanted to fetch the data) add state for the data you'll be getting from NASA.
 - [ ] Add an effect hook to handle the API call side effect.
